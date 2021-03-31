@@ -3,9 +3,11 @@ const validationInputRef = document.querySelector('#validation-input');
 const onValidationInputBlur = (event) => {
   const thisEl = event.currentTarget;
   const thisValueLength = thisEl.value.length;
-  const validLength = thisEl.dataset.length;
+  const validLength = Number(thisEl.dataset.length);
 
-  thisEl.classList.add(thisValueLength <= validLength ? 'valid' : 'invalid');
+  console.log(thisValueLength, validLength)
+
+  thisEl.classList.add(thisValueLength === validLength ? 'valid' : 'invalid');
 
 }
 
