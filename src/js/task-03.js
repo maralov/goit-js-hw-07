@@ -28,4 +28,3 @@ const galleryMarkup = images
   }).join('')
 
 galleryEL.insertAdjacentHTML('afterbegin', galleryMarkup)
-console.log(`galleryMarkup`, galleryMarkup)
